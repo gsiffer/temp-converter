@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temp Converter</title>
+    <script src="scripts/script.js" defer="defer"></script>
+  </head>
+  <body>
+    <main style="background-color: #dedede; height: 100vh; padding: 20px">
+      <div style="max-width: 300px; margin: auto; margin-top: 50px">
+        <form
+          id="myForm"
+          style="display: flex; flex-direction: column; gap: 20px"
+        >
+          <h2 style="margin: 0; color: grey">Temperature Converter</h2>
+          <input
+            type="text"
+            id="tempInput"
+            name="temp"
+            placeholder="Enter temperature"
+            maxlength="10"
+            required
+          />
+          <fieldset style="border: 2px groove; padding: 10px">
+            <legend>Options:</legend>
+            <div style="display: flex">
+              <div
+                style="
+                  width: 75%;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  margin: auto;
+                "
+              >
+                <div>
+                  <input
+                    type="radio"
+                    id="ctof"
+                    name="convertType"
+                    value="CtoF"
+                    checked
+                  />
+                  <label for="ctof">Celsius to Fahrenheit</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="ftoc"
+                    name="convertType"
+                    value="FtoC"
+                  />
+                  <label for="ftoc">Fahrenheit to Celsius</label>
+                </div>
+              </div>
+              <div style="width: 25%">
+                <img
+                  style="max-width: 100%; height: auto"
+                  src="images/temp.png"
+                  alt="temp"
+                />
+              </div>
+            </div>
+          </fieldset>
+          <button
+            style="
+              width: 100px;
+              margin: auto;
+              border-radius: 0.25rem;
+              background-color: lightgrey;
+            "
+            onmouseover="this.style.backgroundColor='whitesmoke';"
+            onmouseout="this.style.backgroundColor='lightgrey';"
+            type="submit"
+          >
+            Convert
+          </button>
+        </form>
+
+        <div style="margin: 0; margin-top: 30px" id="responseContainer"></div>
+      </div>
+    </main>
+  </body>
+</html>
